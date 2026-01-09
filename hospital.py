@@ -12,8 +12,8 @@ def hospital(patient, doctor, date):
         return "Doctor not available"
 
 
-# Run program normally
 if __name__ == "__main__":
+    # Interactive part runs ONLY if this script is executed directly
     patient = input("Enter patient name: ")
     doctor = input("Enter doctor name: ")
     date = input("Enter appointment date: ")
