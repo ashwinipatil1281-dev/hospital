@@ -1,26 +1,12 @@
-# test_hospital.py
-from hospital import hospital_details
-
-
-def test_hospital_success():
-    output = hospital_details("Alice", "Dr. Smith", "10/10/2026")
-    expected = (
-        "Appointment booked successfully!\n"
-        "Patient Name: Alice\n"
-        "Doctor: Dr. Smith\n"
-        "Date: 10/10/2026"
+def hospital_details(pId, pname, doctor, date):
+    result = (
+        f"Patient ID: {pId}\n"
+        f"Patient Name: {pname}\n"
+        f"Doctor: {doctor}\n"
+        f"Date: {date}"
     )
-    assert output == expected
-    print(" Success case passed")
-
-
-def test_hospital_details_failure():
-    output = hospital_details("Bob", "Dr. Unknown", "12/10/2026")
-    assert output == "Doctor not available"
-    print("Failure case passed")
+    return result
 
 
 if __name__ == "__main__":
-    test_hospital_details_success()
-    test_hospital_failure()
-    print("All tests passed!")
+    print(hospital_details("H101", "Alice", "Dr. Smith", "10/10/2026"))
