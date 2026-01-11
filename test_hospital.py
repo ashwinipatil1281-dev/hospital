@@ -1,12 +1,11 @@
-def hospital_details(pId, pname, doctor, date):
-    result = (
-        f"Patient ID: {pId}\n"
-        f"Patient Name: {pname}\n"
-        f"Doctor: {doctor}\n"
-        f"Date: {date}"
+from hospital import hospital_details
+
+def test_hospital_details():
+    expected_output = (
+        "Patient ID: H101\n"
+        "Patient Name: Alice\n"
+        "Doctor: Dr. Smith\n"
+        "Date: 10/10/2026"
     )
-    return result
-
-
-if __name__ == "__main__":
-    print(hospital_details("H101", "Alice", "Dr. Smith", "10/10/2026"))
+    assert hospital_details("H101", "Alice", "Dr. Smith", "10/10/2026") == expected_output
+    print("✅ Hospital details test passed")
