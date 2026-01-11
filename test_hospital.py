@@ -1,5 +1,6 @@
 # test_hospital.py
-from hospital import hospital
+from hospital import hospital_details
+
 
 def test_hospital_success():
     output = hospital("Alice", "Dr. Smith", "10/10/2026")
