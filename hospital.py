@@ -1,4 +1,4 @@
-def hospital(patient, doctor, date):
+def hospital_details(patient, doctor, date):
     doctors = ["Dr. Smith", "Dr. John", "Dr. Emily"]
 
     if doctor in doctors:
