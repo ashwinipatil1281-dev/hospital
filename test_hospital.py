@@ -1,5 +1,6 @@
-from hospital import hospital
+# test_hospital.py
 
+from hospital import hospital
 
 def test_hospital_success():
     output = hospital("Alice", "Dr. Smith", "10/10/2026")
@@ -10,8 +11,16 @@ def test_hospital_success():
         "Date: 10/10/2026"
     )
     assert output == expected
+    print("✅ Success case passed")
 
 
 def test_hospital_failure():
     output = hospital("Bob", "Dr. Unknown", "12/10/2026")
     assert output == "Doctor not available"
+    print("✅ Failure case passed")
+
+
+if __name__ == "__main__":
+    test_hospital_success()
+    test_hospital_failure()
+    print("🎉 All tests passed!")
