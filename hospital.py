@@ -18,7 +18,7 @@ if __name__ == "__main__":
         doctor = input("Enter doctor name: ")
         date = input("Enter appointment date: ")
 
-        result = hospital(patient, doctor, date)
+        result = hospital_details(patient, doctor, date)
         print(result)
     except EOFError:
         # This prevents Jenkins/pytest from crashing when no input is available
