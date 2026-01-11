@@ -13,10 +13,13 @@ def hospital(patient, doctor, date):
 
 
 if __name__ == "__main__":
-    # Interactive part runs ONLY if this script is executed directly
-    patient = input("Enter patient name: ")
-    doctor = input("Enter doctor name: ")
-    date = input("Enter appointment date: ")
+    try:
+        patient = input("Enter patient name: ")
+        doctor = input("Enter doctor name: ")
+        date = input("Enter appointment date: ")
 
-    result = hospital(patient, doctor, date)
-    print(result)
+        result = hospital(patient, doctor, date)
+        print(result)
+    except EOFError:
+        # This prevents Jenkins/pytest from crashing when no input is available
+        print("Interactive input not available in this environment.")
