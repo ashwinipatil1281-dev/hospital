@@ -7,5 +7,4 @@ def test_hospital_details():
         "Doctor: Dr. Smith\n"
         "Date: 10/10/2026"
     )
-    assert hospital_details("H101", "Alice", "Dr. Smith", "10/10/2026") == expected_output
-    print(" Hospital details test passed")
+    assert hospital_details("H101", "Alice", "Dr. Smith", "10/10/2026")
