@@ -13,18 +13,18 @@ def test_hospital_details():
 
 if __name__ == "__main__":
     try:
-        # Try interactive input
+        # User input mode
         pId = input("Enter patient ID: ")
         pname = input("Enter patient name: ")
         doctor = input("Enter doctor name: ")
         date = input("Enter appointment date: ")
 
         result = hospital_details(pId, pname, doctor, date)
-        print("\n--- User Input Output ---")
+        print("\n--- User Output ---")
         print(result)
 
     except EOFError:
-        # If no input available (like Jenkins), run the test instead
+        # Jenkins or pytest fallback
         print("No interactive input available, running tests instead...\n")
         test_hospital_details()
         print("🎉 All tests passed!")
