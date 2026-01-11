@@ -1,5 +1,4 @@
 # test_hospital.py
-
 from hospital import hospital
 
 def test_hospital_success():
