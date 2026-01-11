@@ -10,16 +10,16 @@ def test_hospital_success():
         "Date: 10/10/2026"
     )
     assert output == expected
-    print("✅ Success case passed")
+    print(" Success case passed")
 
 
 def test_hospital_failure():
     output = hospital("Bob", "Dr. Unknown", "12/10/2026")
     assert output == "Doctor not available"
-    print("✅ Failure case passed")
+    print("Failure case passed")
 
 
 if __name__ == "__main__":
     test_hospital_success()
     test_hospital_failure()
-    print("🎉 All tests passed!")
+    print("All tests passed!")
