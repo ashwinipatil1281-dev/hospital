@@ -3,7 +3,7 @@ from hospital import hospital_details
 
 
 def test_hospital_success():
-    output = hospital("Alice", "Dr. Smith", "10/10/2026")
+    output = hospital_details("Alice", "Dr. Smith", "10/10/2026")
     expected = (
         "Appointment booked successfully!\n"
         "Patient Name: Alice\n"
@@ -14,13 +14,13 @@ def test_hospital_success():
     print(" Success case passed")
 
 
-def test_hospital_failure():
-    output = hospital("Bob", "Dr. Unknown", "12/10/2026")
+def test_hospital_details_failure():
+    output = hospital_details("Bob", "Dr. Unknown", "12/10/2026")
     assert output == "Doctor not available"
     print("Failure case passed")
 
 
 if __name__ == "__main__":
-    test_hospital_success()
+    test_hospital_details_success()
     test_hospital_failure()
     print("All tests passed!")
