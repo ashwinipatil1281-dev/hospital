@@ -7,4 +7,24 @@ def test_hospital_details():
         "Doctor: Dr. Smith\n"
         "Date: 10/10/2026"
     )
-    assert hospital_details("H101", "Alice", "Dr. Smith", "10/10/2026")
+    assert hospital_details("H101", "Alice", "Dr. Smith", "10/10/2026") == expected_output
+    print("✅ Hospital details test passed")
+
+
+if __name__ == "__main__":
+    try:
+        # Try interactive input
+        pId = input("Enter patient ID: ")
+        pname = input("Enter patient name: ")
+        doctor = input("Enter doctor name: ")
+        date = input("Enter appointment date: ")
+
+        result = hospital_details(pId, pname, doctor, date)
+        print("\n--- User Input Output ---")
+        print(result)
+
+    except EOFError:
+        # If no input available (like Jenkins), run the test instead
+        print("No interactive input available, running tests instead...\n")
+        test_hospital_details()
+        print("🎉 All tests passed!")
